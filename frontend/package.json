@@ -103,10 +103,10 @@
   },
   "scripts": {
     "prestart": "npm run make-version",
-    "start": "cross-env REACT_APP_HEADLAMP_BACKEND_TOKEN=headlamp vite",
+    "start": "node init && cross-env REACT_APP_HEADLAMP_BACKEND_TOKEN=headlamp vite",
     "preview": "vite preview",
     "prebuild": "npm run make-version",
-    "build": "cross-env PUBLIC_URL=./ NODE_OPTIONS=--max-old-space-size=8096 vite build && npx shx rm -f build/frontend/index.baseUrl.html",
+    "build": "node init && cross-env PUBLIC_URL=./ NODE_OPTIONS=--max-old-space-size=8096 vite build && npx shx rm -f build/frontend/index.baseUrl.html",
     "pretest": "npm run make-version",
     "test": "vitest",
     "start-without-multiplexer": "cross-env REACT_APP_ENABLE_WEBSOCKET_MULTIPLEXER=false npm run start",

@@ -8,8 +8,8 @@
     "releaser": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
-    "start": "tsc && node dist/index.js"
+    "build": "node init && tsc",
+    "start": "node init && tsc && node dist/index.js"
   },
   "dependencies": {
     "@octokit/rest": "^22.0.0",
